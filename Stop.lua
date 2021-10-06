@@ -1,15 +1,12 @@
 
-local Init = require "Init"
-
 --------------------------------------------------------------------------------
 -- Randomly adjust the photo.
-local function go()
-	STOP_RANDOM = false
-	Init.go()
+local function stop()
+	STOP_RANDOM = true
 end
 
 --------------------------------------------------------------------------------
 -- go!!!!
-go()
+stop()
 
 

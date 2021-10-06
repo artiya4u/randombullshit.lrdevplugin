@@ -21,6 +21,8 @@ end
 
 --------------------------------------------------------------------------------
 -- Adjustment
+STOP_RANDOM = false
+
 local limit = 0.4
 local processing = false
 
@@ -74,7 +76,7 @@ function sendChangedParams( observer )
         sum = sum + observer[param]
     end
 
-    if not processing and sum == 50 and observer["Brightness"] == 50
+    if not processing and not STOP_RANDOM and sum == 50 and observer["Brightness"] == 50 
     then
         go()
     end

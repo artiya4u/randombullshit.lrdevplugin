@@ -11,8 +11,14 @@ return {
 
 	-- Add the menu item to the File menu.
 	LrExportMenuItems = {
-		title = "Go!!!!",
-		file = "RandomBullshit.lua",
+		{
+			title = "Go!!!!",
+			file = "RandomBullshit.lua",
+		},
+		{
+			title = "Stap!!!!",
+			file = "Stop.lua",
+		}
 	},
 
 	VERSION = { major=10, minor=0, revision=0, build="202110051851-ef6045e0", },
