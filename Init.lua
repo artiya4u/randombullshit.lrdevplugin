@@ -47,7 +47,7 @@ local function go()
 	if (LrApplicationView.getCurrentModuleName() == "develop")
     then
         processing = true
-		LrDevelopController.setValue( "Exposure", -1 + math.random() )
+		LrDevelopController.setValue( "Exposure", -1 + math.random() * 2 )
 
 		for _, adjust in ipairs(adjustsLess) do
 			local minAdjust, maxAdjust = LrDevelopController.getRange(adjust)
