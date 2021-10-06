@@ -6,7 +6,9 @@ return {
 	LrToolkitIdentifier = 'com.bootlegsoft.randombullshit',
 
 	LrPluginName = LOC "$$$/RandomBullshit/PluginName=Random Bullshit",
-	
+    LrForceInitPlugin = true,
+    LrInitPlugin = 'Init.lua', -- Main client logic
+
 	-- Add the menu item to the File menu.
 	LrExportMenuItems = {
 		title = "Go!!!!",
