@@ -56,6 +56,7 @@ local function go()
 			local minAdjust, maxAdjust = LrDevelopController.getRange(adjust)
 		    LrDevelopController.setValue( adjust, math.random(minAdjust, maxAdjust) )
 		end
+		LrDevelopController.stopTracking()
 		processing = false
 	end
 end
