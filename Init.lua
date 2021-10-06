@@ -68,15 +68,21 @@ local sendChangedParams
 
 -- send changed parameters
 function sendChangedParams( observer )
-    local sum = 0
+    local allZero = true
     for _, param in ipairs(adjustsFull) do
         if(observer[param] ~= LrDevelopController.getValue(param)) then
             observer[param] = LrDevelopController.getValue(param)
         end
-        sum = sum + observer[param]
+        local value = observer[param]
+        if (param == "Brightness") then
+            value = value - 50
+        end
+        if (value ~= 0) then
+            allZero = false
+        end
     end
 
-    if not processing and not STOP_RANDOM and sum == 50 and observer["Brightness"] == 50 
+    if not processing and not STOP_RANDOM and allZero
     then
         go()
     end
