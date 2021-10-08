@@ -49,6 +49,9 @@ local function go()
         processing = true
 		LrDevelopController.setValue( "Exposure", -1 + math.random() * 2 )
 
+		-- Random WB is not really yield a good result
+		-- LrDevelopController.setValue( "Temperature", math.random(4000, 7000) )
+
 		for _, adjust in ipairs(adjustsLess) do
 			local minAdjust, maxAdjust = LrDevelopController.getRange(adjust)
 		    LrDevelopController.setValue( adjust, math.random(minAdjust*limit, maxAdjust*limit) )
